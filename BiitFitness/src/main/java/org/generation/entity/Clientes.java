@@ -7,6 +7,8 @@ import javax.persistence.*;
 
 import org.generation.entity.abstract_class.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import org.generation.entity.Clientes;
 
 
@@ -16,7 +18,7 @@ import org.generation.entity.Clientes;
 @Table(name="Clientes")
 public class Clientes extends ClientesAbstract {
 		
-	 
+	 	@JsonIgnore
 		@Column(name="contrasena", updatable=false, length=CONTRASENA_MAX_LENGTH)	
 		private String contrasena;
 		@Column(name="Socio_activo")

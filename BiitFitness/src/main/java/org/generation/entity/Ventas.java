@@ -22,7 +22,6 @@ public class Ventas {
 	@Column(name = "created_at", insertable=false,  updatable=false , columnDefinition = "timestamp default CURRENT_TIMESTAMP")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Calendar createdAt;
-	
 	@ManyToOne
 	@JoinColumn(name="id_cliente")
 	private Clientes idCliente;
